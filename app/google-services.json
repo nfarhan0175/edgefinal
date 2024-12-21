@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222502227913",
+    "project_id": "edgefinal-d3638",
+    "storage_bucket": "edgefinal-d3638.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222502227913:android:5f16ea4864d5086c28a218",
+        "android_client_info": {
+          "package_name": "com.example.edgefinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4D_cc08TJKpoV-x6NMaNZXaCWQLgfJ9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
