@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class setFragment extends Fragment implements SensorEventListener {
 
-    private TextView text, text2, text3;
+    private TextView text1, text2, text3;
 
     public setFragment() {
         // Required empty public constructor
@@ -29,7 +29,7 @@ public class setFragment extends Fragment implements SensorEventListener {
         View rootView = inflater.inflate(R.layout.fragment_set, container, false);
 
         // Initialize TextViews
-        text = rootView.findViewById(R.id.text1);
+        text1 = rootView.findViewById(R.id.text1);
         text2 = rootView.findViewById(R.id.text2);
         text3 = rootView.findViewById(R.id.text3);
 
@@ -53,6 +53,7 @@ public class setFragment extends Fragment implements SensorEventListener {
             if (proximitySensor != null) {
                 sensorManager.registerListener(this, proximitySensor, SensorManager.SENSOR_DELAY_NORMAL);
             }
+
         }
 
         return rootView;
@@ -62,8 +63,9 @@ public class setFragment extends Fragment implements SensorEventListener {
     public void onSensorChanged(SensorEvent sensorEvent) {
         // Handle sensor events based on the sensor type
         if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            text.setText("X: " + sensorEvent.values[0] + " Y: " + sensorEvent.values[1] + " Z: " + sensorEvent.values[2]);
+            text1.setText("X: " + sensorEvent.values[0] + " Y: " + sensorEvent.values[1] + " Z: " + sensorEvent.values[2]);
         }
+
         if (sensorEvent.sensor.getType() == Sensor.TYPE_LIGHT) {
             if (sensorEvent.values[0] > 0) {
                 text2.setText("Light intensity high: " + sensorEvent.values[0]);

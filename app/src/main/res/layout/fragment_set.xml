@@ -18,10 +18,19 @@
             app:cardElevation="20dp"
             app:cardCornerRadius="15dp"
             app:cardUseCompatPadding="true">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="light sensor"-->
+<!--                android:id="@+id/text1"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="20dp"-->
+<!--                android:padding="20dp"-->
+<!--                android:textColor="@color/black"/>-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="light sensor"
+                android:text="accelerometer Sensor"
                 android:id="@+id/text1"
                 android:gravity="center"
                 android:textSize="20dp"
@@ -38,7 +47,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="motion sensor"
+                android:text="light sensor"
                 android:gravity="center"
                 android:id="@+id/text2"
                 android:textSize="20dp"

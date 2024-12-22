@@ -46,7 +46,6 @@ public class noteFragment extends Fragment {
                     // Insert note without the ID (since it's auto-incremented)
                     mydbhelper.addnote(Name, note);
                     Toast.makeText(getActivity(), "Note added successfully", Toast.LENGTH_SHORT).show();
-
                     // Start note list activity
                     Intent intent = new Intent(getActivity(), note_list.class);
                     startActivity(intent);
@@ -74,6 +73,8 @@ public class noteFragment extends Fragment {
                     // Notify the user and show the updated list of notes
                     ArrayList<Notemodel> studentList = mydbhelper.getNotes();
                     Toast.makeText(getActivity(), "Note updated successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), note_list.class);
+                    startActivity(intent);
 
                     for (Notemodel student : studentList) {
                         Log.d("Database_operation_fetched", "Note id: " + student.id + " Name: " + student.name + " Note: " + student.note);
@@ -95,6 +96,8 @@ public class noteFragment extends Fragment {
                     // Delete the note by name
                     mydbhelper.deleteNote(Name);
                     Toast.makeText(getActivity(), "Note deleted", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), note_list.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getActivity(), "Please enter a name to delete", Toast.LENGTH_SHORT).show();
                 }
